@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Cutive+Mono&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "DM Sans";
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  min-height: 1000vh;
+}
+
+/* NAV STYLES */
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(87, 87, 87);
+  background-color: black;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  text-decoration: none;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+.logo span {
+  color: greenyellow;
+}
+
+.nav-links {
+  display: flex;
+  padding: 2rem;
+  column-gap: 2rem;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links li a:hover {
+  color: greenyellow;
+}
+
+/* HERO STYLES */
+
+.hero {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-text {
+  padding: 3rem 1rem;
+  font-size: 1rem;
+  gap: 2rem;
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: left;
+  color: white;
+  padding: 2rem 0;
+}
+
+.hero-text h1 span {
+  color: greenyellow;
+}
+
+.tagline {
+  color: greenyellow;
+  text-transform: uppercase;
+}
+
+.tagline::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1.5px;
+  background: greenyellow;
+  margin: 0.3rem;
+}
+
+.hero-description {
+  color: gray;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 400px;
+}
+
+.hero-actions {
+  display: flex;
+  padding: 2rem 0;
+  gap: 15px;
+}
+
+.btn-primary {
+  text-decoration: none;
+  color: black;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  background-color: rgb(5, 231, 24);
+}
+
+.btn-outline {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.hero-actions .btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-2px);
+  transition: 0.5s ease-out;
+}
+
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.stat-item {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 28px;
+    
+}
