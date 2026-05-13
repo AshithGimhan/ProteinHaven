@@ -31,6 +31,3 @@ ProteinHaven/
 
 Just open `index.html` in your browser. No installs needed.
 
-## Live Site
-
-Coming soon.
