@@ -44,6 +44,7 @@ nav {
   display: none;
   padding: 1rem;
   column-gap: 32px;
+  text-transform: uppercase;
 }
 
 .nav-links li {
@@ -66,7 +67,6 @@ nav {
   grid-template-columns: 1fr;
   min-height: 88vh;
   place-items: center;
-  border-bottom: 1px solid rgb(87, 87, 87);
 }
 
 .hero-text {
@@ -168,25 +168,24 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 36px;
+  padding: 54px;
 }
 
 .image-frame img {
-  width: 100%;
-  max-width: 300px;
-  max-height: 600px;
+  width: 90%;
+  max-height: 650px;
   transform: rotateZ(-5deg);
 }
 
 .image-frame img:hover {
-  animation: shake 0.9s ease-in-out;
+  animation: shake 0.9s ease-in-out reverse;
   cursor: pointer;
 }
 
 /* ANIMATIONS */
 @keyframes shake {
   0% {
-    transform: rotate(0deg) translateX(0);
+    transform: rotate(0eg) translateX(0);
   }
 
   15% {
@@ -206,21 +205,21 @@ nav {
   }
 
   75% {
-    transform: rotate(-3deg) translateX(0);
+    transform: rotate(-5deg) translateX(0);
   }
 
   100% {
-    transform: rotate(-5deg) translateX(0);
+    transform: rotate(0deg) translateX(0);
   }
 }
 
 /* SECOND SECTION STYLES */
 .second-section {
   color: white;
-  padding: 32px 0;
+  padding: 45px 0;
   display: flex;
   place-items: center;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 .information-container {
@@ -229,8 +228,8 @@ nav {
   padding: 24px;
   gap: 24px;
   width: 100%;
- 
-  
+  max-width: 1100px;
+  margin-top: 50px;
 }
 
 .information-card {
@@ -242,8 +241,12 @@ nav {
   height: 100%;
 }
 
+.information-card:hover {
+  animation: shake 1s;
+}
+
 .information-card h1 {
-  font-size: 28px;
+  font-size: 24px;
   padding: 12px 0;
   margin-bottom: auto;
 }
@@ -252,7 +255,6 @@ nav {
   font-size: 18px;
   color: gray;
   padding: 12px 0;
-  
 }
 
 .green-tag {
@@ -260,13 +262,13 @@ nav {
   width: max-content;
   border-radius: 10px;
   display: flex;
-  padding: 0 12px
-  
+  padding: 0 12px;
 }
 
 .green-tag p {
   color: greenyellow;
 }
+
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
