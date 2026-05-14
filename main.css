@@ -23,6 +23,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  z-index: 1;
 }
 
 .logo {
@@ -64,6 +65,8 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   min-height: 88vh;
+  place-items: center;
+  border-bottom: 1px solid rgb(87, 87, 87);
 }
 
 .hero-text {
@@ -180,6 +183,7 @@ nav {
   cursor: pointer;
 }
 
+/* ANIMATIONS */
 @keyframes shake {
   0% {
     transform: rotate(0deg) translateX(0);
@@ -208,6 +212,60 @@ nav {
   100% {
     transform: rotate(-5deg) translateX(0);
   }
+}
+
+/* SECOND SECTION STYLES */
+.second-section {
+  color: white;
+  padding: 32px 0;
+  display: flex;
+  place-items: center;
+  flex-direction: column;  
+}
+
+.information-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 24px;
+  gap: 24px;
+  width: 100%;
+ 
+  
+}
+
+.information-card {
+  border: 1px solid rgba(172, 255, 47, 0.541);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  text-align: start;
+  height: 100%;
+}
+
+.information-card h1 {
+  font-size: 28px;
+  padding: 12px 0;
+  margin-bottom: auto;
+}
+
+.information-card p {
+  font-size: 18px;
+  color: gray;
+  padding: 12px 0;
+  
+}
+
+.green-tag {
+  border: 1px solid green;
+  width: max-content;
+  border-radius: 10px;
+  display: flex;
+  padding: 0 12px
+  
+}
+
+.green-tag p {
+  color: greenyellow;
 }
 
 /* MEDIA QUERIES */
