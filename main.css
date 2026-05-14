@@ -21,8 +21,8 @@ nav {
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
 }
 
 .logo {
@@ -31,7 +31,7 @@ nav {
   font-size: 1.5rem;
   color: white;
   font-weight: 500;
-  align-items: center;
+  align-items: start;
   padding: 16px;
 }
 
@@ -86,7 +86,6 @@ nav {
 .tagline {
   color: greenyellow;
   text-transform: uppercase;
-  
 }
 
 .tagline::before {
@@ -128,7 +127,8 @@ nav {
   background-color: rgb(0, 0, 0);
 }
 
-.hero-actions .btn-primary:hover, .hero-actions .btn-outline:hover {
+.hero-actions .btn-primary:hover,
+.hero-actions .btn-outline:hover {
   transform: translateY(-2px);
   transition: 0.5s ease-out;
 }
@@ -164,13 +164,50 @@ nav {
 .image {
   display: flex;
   align-items: center;
-  padding: 32px;
+  justify-content: center;
+  padding: 36px;
 }
 
 .image-frame img {
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  max-width: 300px;
+  max-height: 600px;
+  transform: rotateZ(-5deg);
+}
+
+.image-frame img:hover {
+  animation: shake 0.9s ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+
+  15% {
+    transform: rotate(-8deg) translateX(-2px);
+  }
+
+  30% {
+    transform: rotate(8deg) translateX(2px);
+  }
+
+  45% {
+    transform: rotate(-6deg) translateX(-2px);
+  }
+
+  60% {
+    transform: rotate(6deg) translateX(1px);
+  }
+
+  75% {
+    transform: rotate(-3deg) translateX(0);
+  }
+
+  100% {
+    transform: rotate(-5deg) translateX(0);
+  }
 }
 
 /* MEDIA QUERIES */
