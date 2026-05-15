@@ -65,7 +65,7 @@ nav {
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 88vh;
+  min-height: 100dvh;
   place-items: center;
 }
 
@@ -75,14 +75,14 @@ nav {
   flex-direction: column;
 }
 
-.hero-text h1 {
+.hero-title {
   font-size: 2rem;
   text-transform: uppercase;
   color: white;
   padding: 20px 0;
 }
 
-.hero-text h1 span {
+.green {
   color: greenyellow;
 }
 
@@ -185,7 +185,7 @@ nav {
 /* ANIMATIONS */
 @keyframes shake {
   0% {
-    transform: rotate(0eg) translateX(0);
+    transform: rotate(0deg) translateX(0);
   }
 
   15% {
@@ -213,6 +213,8 @@ nav {
   }
 }
 
+
+
 /* SECOND SECTION STYLES */
 .second-section {
   color: white;
@@ -220,6 +222,7 @@ nav {
   display: flex;
   place-items: center;
   flex-direction: column;
+  min-height: 100dvh;
 }
 
 .information-container {
@@ -244,7 +247,7 @@ nav {
   animation: shake 1s;
 }
 
-.information-card h1 {
+.card-title {
   font-size: 24px;
   padding: 12px 0;
   margin-bottom: auto;
@@ -266,7 +269,27 @@ nav {
 
 .green-tag p {
   color: greenyellow;
+  font-size: 14px;
 }
+
+.icons {
+  width: 40px;
+  height: 40px;
+  color: greenyellow;
+  background-color: rgba(172, 255, 47, 0.144);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
 
 /* MENU SECTION STYLES */
 .menu-section {
@@ -274,20 +297,20 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 80px 0;
+  margin: 40px 0;
+  min-height: 100dvh;
 }
 
 .featured {
-  width: 100%;
   max-width: 1100px;
   margin-bottom: 32px;
+  width: 100%;
 }
-
 
 .menu-button {
   background-color: black;
   color: greenyellow;
-  border: 2px solid greenyellow;
+  border: 1px solid greenyellow;
   border-radius: 10px;
   padding: 12px;
   width: max-content;
@@ -297,15 +320,16 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 24px;
-  gap: 30px;
+  gap: 40px;
   width: 100%;
   max-width: 1100px;
 }
 
 .menu-card {
-  border: 2px solid gray;
+  border: 1px solid rgba(128, 128, 128, 0.493);
   padding: 12px;
   height: 100%;
+  border-radius: 2rem;
 }
 
 .menu-top {
@@ -330,16 +354,6 @@ nav {
   background-color: rgb(0, 0, 0);
   color: greenyellow;
   padding: 1px 20px;
-}
-
-.blue {
-  border: 1px solid rgb(2, 61, 255);
-  color: rgb(2, 61, 255);
-}
-
-.orange {
-  border: 1px solid rgb(255, 145, 2);
-  color: rgb(255, 145, 2);
 }
 
 .end {
@@ -367,10 +381,6 @@ nav {
   display: flex;
   flex-flow: column wrap;
   padding: 10px;
-}
-
-.menu-middle h1 {
-  font-size: 28px;
 }
 
 .menu-middle p {
@@ -404,20 +414,21 @@ nav {
   padding: 12px;
   background-color: greenyellow;
   border-radius: 10px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .order-button:hover {
   transform: translateY(-2px);
   transition: 0.8s ease;
+  cursor: pointer;
 }
 
 .menu-card:first-child {
-  border: 1px solid greenyellow;
+  border: 1px solid rgba(172, 255, 47, 0.651);
 }
 
-.menu-card:hover {
-  border: 2px solid rgba(128, 128, 128, 0.562);
+.menu-heading {
+  font-size: 32px
 }
 
 /* MEDIA QUERIES */
@@ -436,12 +447,14 @@ nav {
 @media (min-width: 768px) {
   .hero {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    place-items: center;
   }
 
-  .hero-text h1 {
+  .hero-title {
     font-size: 48px;
+  }
+
+  .section-title{
+    font-size: 40px;
   }
 
   .hero-text p {
@@ -454,5 +467,18 @@ nav {
 
   .stats span {
     font-size: 18px;
+  }
+
+  .information-container {
+    margin: 64px;
+  }
+  
+}
+
+/* Menu button placed in the end 
+for medium and above sizes */
+@media (min-width: 578px) {
+  .menu-button {
+    align-self: end;
   }
 }
