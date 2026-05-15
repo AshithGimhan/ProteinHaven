@@ -118,7 +118,7 @@ nav {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
   padding: 16px;
-  background-color: rgb(5, 231, 24);
+  background-color: greenyellow;
 }
 
 .btn-outline {
@@ -235,7 +235,7 @@ nav {
 }
 
 .information-card {
-  border: 1px solid rgba(172, 255, 47, 0.541);
+  border: 1px solid greenyellow;
   display: flex;
   flex-direction: column;
   padding: 24px;
@@ -260,7 +260,7 @@ nav {
 }
 
 .green-tag {
-  border: 1px solid green;
+  border: 1px solid greenyellow;
   width: max-content;
   border-radius: 10px;
   display: flex;
@@ -424,7 +424,7 @@ nav {
 }
 
 .menu-card:first-child {
-  border: 1px solid rgba(172, 255, 47, 0.651);
+  border: 1px solid greenyellow;
 }
 
 .menu-heading {
