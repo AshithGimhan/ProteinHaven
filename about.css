@@ -76,6 +76,49 @@
   margin: 12px;
 }
 
+/* VALUE SECTION STYLES */
+.value-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 12px 0;
+  min-height: 88vh;
+}
+
+.value-paragraph {
+  color: gray;
+  font-size: 18px;
+  padding-bottom: 16px;
+  line-height: 28px;
+}
+
+.value-columns-section {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.value-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  padding: 8px;
+  gap: 24px;
+}
+
+.value-column {
+  border-radius: 24px;
+  border: 2px solid rgb(40, 40, 40);
+  padding: 16px;
+
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.value-column:hover {
+  cursor: pointer;
+  border-color: rgba(43, 255, 0, 0.5);
+  transform: translateY(-4px);
+}
+
 /* RESPONSIVE STYLES */
 @media (min-width: 768px) {
   .about-hero {
@@ -91,5 +134,28 @@
 
   .how-box-paragraph {
     font-size: 24px;
+  }
+
+  .value-paragraph {
+    font-size: 20px;
+  }
+
+  .value-column .card-title {
+    font-size: 28px;
+    padding: 4px 0;
+  }
+
+  .value-container {
+    max-width: 1200px;
+  }
+
+  .value-column .green-tag p {
+    font-size: 18px;
+  }
+
+  .value-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
